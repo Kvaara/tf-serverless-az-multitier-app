@@ -32,3 +32,7 @@ Lastly, you could reduce the *scale-out behavior* of functions with the `site_co
 3. Find your subscription ID from the Azure portal and replace the `null` value in the [terraform.tfvars](./terraform.tfvars) file with it.
 4. Run `terraform apply`.
 5. Afterwards, Terraform should print an output to the terminal with a workable link to your deployed serverless multi-tier application.
+
+## Supplementary
+
+[v3 of Azure Functions Node.js developer guide](https://learn.microsoft.com/en-us/azure/azure-functions/functions-reference-node?pivots=nodejs-model-v3&tabs=javascript%2Cwindows%2Cazure-cli#inputs-and-outputs).
