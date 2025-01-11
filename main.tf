@@ -119,10 +119,10 @@ resource "azurerm_linux_function_app" "this" {
       // When this is set, Terraform automatically creates the `FUNCTIONS_WORKER_RUNTIME` variable with the value `node` and the `WEBSITE_NODE_DEFAULT_VERSION` variable with the below value in the app_settings block.
       node_version = "20"
     }
+    // `WEBSITES_MAX_DYNAMIC_APPLICATION_SCALE_OUT`
+    app_scale_limit = 1
   }
-
   functions_extension_version = "~4"
-
   app_settings = {
     WEBSITE_RUN_FROM_PACKAGE = local.package_url
     // The below is available only on Windows Function apps: https://learn.microsoft.com/en-us/azure/azure-functions/functions-app-settings#website_node_default_version
